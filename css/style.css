@@ -1,0 +1,136 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 90%;
+    gap: 10px;
+    justify-content: center;
+}
+
+figure * {
+    padding: 0;
+    margin: 0;
+}
+
+figure {
+    padding: 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: azure;
+    border: 0.3em black solid;
+    border-radius: 3em;
+    overflow: hidden;
+}
+
+figcaption {
+    padding: 1em 2em;
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 772px) {
+    .grid {
+        grid-template-columns: 45% 45%;
+    }
+
+    figure {
+        position: relative;
+        border-radius: 90%;
+    }
+
+    figcaption {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        text-align: center;
+        bottom: 1.5em;
+        color: white;
+    }
+
+    figure:nth-child(9n) {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    figure {
+        position: static;
+        border-radius: 0;
+    }
+
+    figcaption {
+        position: static;
+        background-color: white;
+        color: black;
+    }
+
+    figure:nth-child(3n) {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    html {
+        scroll-behavior: none;
+    }    
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: darkslategray;
+        color: white;
+    }
+
+    figcaption {
+        background-color: black;
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+
+    footer a {
+        color: white;
+    }
+}
+
+
+
+
